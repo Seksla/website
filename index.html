@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
-        <title>Kosarasok [Minta_2]</title>
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" type="image/x-icon">
+        <title>Kosarasok éjszakája</title>
     </head>
     <body>
         <button onclick="Switch()" id="switch">
@@ -13,27 +14,30 @@
             <img id="ball_star" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" alt="Kosárlabda égitest">
         </button>
 
-
-        <div id="darkness"></div>
-
         <div id="bk_backboard_holder">
-            <img class="bk_backboard" id="0" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
-            <span>Naptár</span>
-            <img class="bk_backboard" id="1" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
-            <span>Résztvevők</span>
-            <img class="bk_backboard" id="2" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
-            <span>Meccsek és eredmények</span>
-            <img class="bk_backboard" id="3" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
-            <span>Galéria</span>
-            <img class="bk_backboard" id="4" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
+            <div class="bk_backboard"  id="calendar">
+                <img src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
+                <p>Naptár</p>
+            </div>
+            <div class="bk_backboard"  id="participants">
+                <img src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
+                <p>Résztvevők</p>
+            </div>
+            <div class="bk_backboard"  id="match_result">
+                <img src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
+                <p>Meccsek és eredmények</p>
+            </div>
+            <div class="bk_backboard"  id="gallery">
+                <img src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073040636612608/basketball_backboard.png" alt="Palánk">
+                <p>Galéria</p>
+            </div>
         </div>
-        <div id="lights">
+        <div class="lights">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <div id="afternoon_light"></div>
         <img id="bk_ball" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" alt="Kosárlabda">
         <script src="index.js"></script>
     </body>
