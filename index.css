@@ -266,7 +266,7 @@ body {
 }
 @media screen and (max-width:425px) {
     body {overflow-y: scroll;overflow-x: hidden;}
-    .bk_backboard > p {font-size: 0.8em;}
+    .bk_backboard > p {top: 20%; font-size: 1em;}
     #switch {
         width: 100vw;
         height: 15vh;
@@ -285,18 +285,21 @@ body {
     }
     .bk_backboard {
         position: relative;
-        width: 55%;
+        width: 80%;
         height: 30%;
-        left: 22.5%;
+        left: 10%;
     }
     .bk_backboard > img {
         position: absolute;
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
         filter: drop-shadow(0px 0px 10px black) grayscale(100%);
         transition-duration: 0.5s;
         user-select: none;
         -webkit-user-drag: none;
     }
     .lights {position: fixed;}
+}
+@media screen and (max-width:320px) {
+    .bk_backboard > p {top: 15%;}
 }
