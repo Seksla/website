@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" type="image/x-icon">
+        <title>Résztvevők</title>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+            body {
+                background-image: url('https://cdn.discordapp.com/attachments/1066072940191416372/1084082191790784632/background_sidepage_4x.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+            }
+            #basketball {
+                position: absolute;
+                height: 80vh;
+                top: 10vh;
+                left: 30%;
+                filter: drop-shadow(0px 0px 10px black) blur(2px);
+            }
+            #main_table {
+                position: relative;
+                width: 80vw;
+                height: 90vh;
+                top: 5vh;
+                left: 10vw;
+            }
+            #folder_tag {
+                position: relative;
+                width: 100%;
+                height: 10%;
+                top: 0%;
+                left: 0%;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+            }
+            #folder_tag > div {
+                position: relative;
+                height: min-content;
+                width: 20%;
+                padding: 1vh;
+                text-align: center;
+                font-size: 5vh;
+                font-family: 'Arvo', serif;
+                background-color: rgb(255, 255, 0);
+                transition-duration: 0.5s;
+                user-select: none;
+            }
+            #folder_body {
+                position: relative;
+                width: 100%;
+                height: 90%;
+                top: 0%;
+                left: 0%;
+                background-color: rgb(255, 255, 0);
+                overflow-y: hidden;
+                filter: brightness(0.9);
+                display: flex;
+                flex-direction: row;
+            }
+            #folder_body > #name_column, #folder_body > #team_column, #folder_body > #jersey_number_column {
+                position: relative;
+                width: calc(100%/3 - 5%);
+                height: 100%;
+                top: 0%;
+                left: 7.5%;
+                margin-top: 2%;
+                border-left: 10px solid rgb(192, 90, 0);
+                border-top: 10px solid rgb(192, 90, 0);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #folder_body > #jersey_number_column {
+                border-right: 10px solid rgb(192, 90, 0);
+            }
+            #folder_body > #name_column > .name_item, #team_column > .team_item, #jersey_number_column > .jersey_number_item {
+                position: relative;
+                width: 100%;
+                height: 15%;
+                top: 0%;
+                left: 0%;
+                margin-bottom: 2%;
+                background-color: rgb(255, 150, 0);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            #folder_body > #name_column > .name_item > img {
+                position: relative;
+                width: auto;
+                height: 80%;
+                top: 0%;
+                margin-left: 5%;
+                border: 5px solid black;
+                border-radius: 10px;
+                background-color: grey;
+            }
+            #folder_body > #team_column > .team_item > span, #name_column > .name_item > span, #jersey_number_column > .jersey_number_item > span {
+                position: relative;
+                width: 65%;
+                text-align: center;
+                height: min-content;
+                font-size: 2.25vw;
+                font-family: 'Arvo', serif;
+                margin: 0 auto 0 auto;
+                top: 0%;
+                overflow-y: hidden;
+                overflow-x: auto;
+            }
+        </style>
+        <img id="basketball" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" alt="Kosárlabda">
+        <div id="main_table">
+            <div id="folder_tag">
+                <div>Játkosok</div>
+                <div style="filter: brightness(0.8);">Segítök</div>
+                <div style="filter: brightness(0.8);">Tanárok</div>
+            </div>
+            <div id="folder_body">
+                <div id="name_column">
+                    <div class="name_item">
+                        <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="">
+                        <span>Játékos neve</span>
+                    </div>
+                    <div class="name_item">
+                        <img src="calendar.svg" alt="">
+                        <span>January</span>
+                    </div>
+                    <div class="name_item">
+                        <img src="calendar.svg" alt="">
+                        <span>Tuesday</span>
+                    </div>
+                    <div class="name_item">
+                        <img src="calendar.svg" alt="">
+                        <span>Wednesday</span>
+                    </div>
+                </div>
+                <div id="team_column">
+                    <div class="team_item">
+                        <span>Csapat neve</span>
+                    </div>
+                    <div class="team_item">
+                        <span>Month</span>
+                    </div>
+                    <div class="team_item">
+                        <span>Week</span>
+                    </div>
+                    <div class="team_item">
+                        <span>Week</span>
+                    </div>
+                </div>
+                <div id="jersey_number_column">
+                    <div class="jersey_number_item">
+                        <span>Mezszám</span>
+                    </div>
+                    <div class="jersey_number_item">
+                        <span>12</span>
+                    </div>
+                    <div class="jersey_number_item">
+                        <span>24</span>
+                    </div>
+                    <div class="jersey_number_item">
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const folderTags = document.querySelector('#folder_tag').children;
+            for (let x = 0; x < folderTags.length; x++) {
+                folderTags[x].addEventListener('click', () => {
+                    for (let y = 0; y < folderTags.length; y++) {folderTags[y].style.filter = "brightness(0.8)";}
+                    folderTags[x].style.filter = "brightness(1)";
+                })
+                
+                
+            }
+        </script>
+    </body>
+</html>

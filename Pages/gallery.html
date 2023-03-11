@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galéria</title>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+            body {
+                background-image: url('https://cdn.discordapp.com/attachments/1066072940191416372/1084082191790784632/background_sidepage_4x.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+            }
+            #gallery_holder {
+                position: relative;
+                width: 90vw;
+                height: 35vh;
+                left: 5vw;
+                top: 50vh;
+                margin: 0%;
+                padding: 0%;
+                background-color: rgb(0, 0, 0, 0.7);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                overflow-y: auto;
+                transition-duration: 0.5s;
+            }
+            #gallery_holder::-webkit-scrollbar {background-color: black;}
+            #gallery_holder::-webkit-scrollbar-thumb {background-color: rgb(255, 255, 255, 0.8);}
+            .gallery_holder_item {
+                position: relative;
+                width: 60%;
+                height: 70%;
+                top: 0%;
+                margin-right: 1%;
+                margin-left: 1%;
+                padding: 1%;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery_holder_item > img {
+                position: relative;
+                width: 100%;
+                height: 80%;
+                left: 0%;
+                top: 0%;
+                margin: 0%;
+                -webkit-user-drag: none;
+                user-select: none;
+            }
+            .gallery_holder_item > span {
+                position: relative;
+                width: 100%;
+                height: auto;
+                left: 0%;
+                top: 0%;
+                margin: auto 0 auto 0;
+                color: black;
+                text-align: center;
+                font-size: 1.5vw;
+                font-style: italic;
+                font-family: 'Chakra Petch', sans-serif;
+                user-select: none;
+            }
+        </style>
+        <div id="gallery_holder">
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/581746_204903296323902_226228978_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=jlj1GZTO6lcAX8ITWCN&_nc_ht=scontent.fbud4-1.fna&oh=00_AfDtaFjA3qS5_FpMLHTslym38cSgPCKzB8rSVxeNE07n8A&oe=64346C8E" alt="">
+                <span>I.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="" alt="">
+                <span>II.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/923206_204904129657152_444165641_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=V44rrf6cEAkAX8CFhn6&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBW-gKM_Zs-Rn5XSz3CfnOVb3D66BW-1wuSK8lfTt3fRg&oe=64346D2D" alt="">
+                <span>III.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="" alt="">
+                <span>IV.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/988560_204674959680069_109966096_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=76LjiBIUySIAX8GF2Rs&_nc_ht=scontent.fbud4-1.fna&oh=00_AfAIxnE_7k3mfVDj15EkGpdInJQ2e_3rLmmzRCBSGNsSaQ&oe=64346BC4" alt="">
+                <span>V.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="" alt="">
+                <span>VI.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="" alt="">
+                <span>VII.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="" alt="">
+                <span>VIII.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t31.18172-8/23736170_922964817851076_7893338575434817832_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=c4L3NZta1cUAX9vLKIy&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBI1i-GyQsrDowPt0SBV_sk4eCh1CqWWnUFLBTqUezyeg&oe=6434593A" alt="">
+                <span>IX.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/46415912_1177154615765427_4752860828942729216_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=E0uOuOmBzPcAX81U7gr&_nc_ht=scontent.fbud4-1.fna&oh=00_AfCTs4N_zZ-fKS3PjbuUVwqRJkfMme43iuXQ8kjU6n6KhQ&oe=64346B70" alt="">
+                <span>X.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/74932097_1462292557251630_7460515019587846144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=42LYhwbK9oYAX8ddQM3&_nc_ht=scontent.fbud4-1.fna&oh=00_AfA22PuEMfE1pRwpQeewnRX-el8QyKVmIJPxK5voQjd2Mg&oe=64345EA6" alt="">
+                <span>XI.Kosarasok éjszakája</span>
+            </div>
+            <div class="gallery_holder_item">
+                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t39.30808-6/279359112_687108849029021_6730741418091150686_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=a5H3ojvuK_kAX8GzcrP&_nc_oc=AQlfHjoxI0oLUmSH7nyHbj6H23XxjuecAKFxkmIPhnd3IXFsoScakflxMbyMQDGZ8Zw&_nc_ht=scontent.fbud4-1.fna&oh=00_AfC2kUOJe-skQCn8Ku3sSkfvEAWuWkA2V3ub9Iff5DpCAw&oe=64111CB0" alt="">
+                <span>XII.Kosarasok éjszakája</span>
+            </div>
+        </div>
+        <script>
+            const galleryItemsHolder = document.querySelector('#gallery_holder');
+            const galleryItems = document.querySelectorAll('.gallery_holder_item');
+            for (let x = 0; x < galleryItems.length; x++) {
+                galleryItems[x].addEventListener('click', ()=>{
+                    console.log(galleryItemsHolder)
+                    galleryItemsHolder.style.top = "5vh";
+                    galleryItemsHolder.style.height = "30vh";
+                });
+            };
+        </script>
+    </body>
+</html>

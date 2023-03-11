@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" type="image/x-icon">
+        <title>Meccsek és eredmények</title>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+            @font-face {
+                font-family: DoubleLine;
+                src: url('./WanderBrave-axBKK.ttf');
+            }
+
+            body {
+                background-image: url('https://cdn.discordapp.com/attachments/1066072940191416372/1084082191790784632/background_sidepage_4x.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+            }
+            #main_table {
+                position: relative;
+                width: 80vw;
+                height: 70vh;
+                left: 10vw;
+                top: 5vh;
+                background-color: rgb(255, 255, 255, 0.7);
+                display: flex;
+                flex-direction: row;
+                user-select: none;
+            }
+            #date, #team, #result {
+                width: calc(100%/3);
+                text-align: center;
+            }
+            #date > div {
+                border-top: 5px solid black;
+                border-left: 5px solid black;
+                border-bottom: 2.5px solid black;
+                font-style: italic;
+            }
+            #team > div {
+                border-top: 5px solid black;
+                border-left: 5px solid black;
+                border-right: 5px solid black;
+                border-bottom: 2.5px solid black;
+            }
+            #result > div {
+                border-top: 5px solid black;
+                border-right: 5px solid black;
+                border-bottom: 2.5px solid black;
+                font-style: italic;
+            }
+            #date > div, #team > div, #result > div {
+                width: auto;
+                font-size: 5vh;
+                color: white;
+                background-color: white;
+                font-family: 'Chakra Petch', sans-serif;
+                background-color: rgb(255,151,87);
+                text-shadow: 5px 2px 0px rgb(206, 121, 69);
+            }
+            #date > h1, #team > h1, #result > h1 {
+                margin-top: 0px;
+                margin-bottom: -2px;
+                border: 5px solid black;
+                font-family: 'Tilt Prism', cursive;
+
+                font-size: 7vh;
+                color: white;
+                background-color: rgb(255,151,87);
+                text-shadow: 0px 0px 40px white;
+            }
+        </style>
+        <div id="main_table">
+            <div id="date">
+                <h1>Datum</h1>
+                <div>2009-12-23</div>
+                <div>2017-02-18</div>
+                <div>2022-07-21</div>
+            </div>
+            <div id="team">
+                <h1>Csapatnev</h1>
+                <div>bal - jobb</div>
+                <div>test1 - test2</div>
+                <div>test3 - test4</div>
+            </div>
+            <div id="result">
+                <h1>Eredmeny</h1>
+                <div>10 - 0</div>
+                <div>8 - 7</div>
+                <div>12 - 2</div>
+            </div>
+        </div>
+    </body>
+</html>
