@@ -5,10 +5,10 @@ const backboardsHolder = document.querySelector('#bk_backboard_holder');
 const ball = document.querySelector('#bk_ball');
 const animationDelay = 2;
 const linkList = [
-    'calendar.html',
-    'participants.html',
-    'match_result.html',
-    'gallery.html',
+    'calendar',
+    'participants',
+    'match_result',
+    'gallery',
 ]
 let angle = 0;
 let rotateBall;
@@ -31,7 +31,7 @@ for (let x = 0; x < backboards.length; x++) {
         setTimeout(() => {
             clearInterval(rotateBall);
             ball.style.animation = "";
-            window.open('Pages/'+ linkList[backboards[x].id], "_self");
+            window.open('Pages/'+ linkList[linkList.indexOf(backboards[x].id)] + ".html", "_self");
         }, animationDelay*1000);
     });
 }
