@@ -24,23 +24,31 @@
                 top: 50vh;
                 margin: 0%;
                 padding: 0%;
-                background-color: rgb(0, 0, 0, 0.7);
+                background-color: rgb(0, 0, 0);
+                
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                
                 overflow-y: auto;
                 transition-duration: 0.5s;
+                background-image: url("https://media.istockphoto.com/id/539260869/vector/film-reel-illustration-isolated-vector-illustration.jpg?s=612x612&w=0&k=20&c=zlDBfh2HA-C3U7RN5tFSPSownKonJM58SZr7yvQhvl4=");
+                background-size: contain;
+                background-repeat: repeat-x;
+                background-attachment: local;
             }
             #gallery_holder::-webkit-scrollbar {background-color: black;}
             #gallery_holder::-webkit-scrollbar-thumb {background-color: rgb(255, 255, 255, 0.8);}
             .gallery_holder_item {
                 position: relative;
-                width: 60%;
-                height: 70%;
+                width: 15%;
+                height: 65%;
                 top: 0%;
-                margin-right: 1%;
-                margin-left: 1%;
+                margin-right: 0.95%;
+                margin-left: 0.75%;
                 padding: 1%;
+                flex-shrink: 0;
+                border-radius: 10px;
                 background-color: white;
                 display: flex;
                 flex-direction: column;
@@ -65,19 +73,41 @@
                 margin: auto 0 auto 0;
                 color: black;
                 text-align: center;
-                font-size: 1.5vw;
+                font-size: 1.2vw;
                 font-style: italic;
                 font-family: 'Chakra Petch', sans-serif;
                 user-select: none;
             }
+            #film_roll {
+                z-index: 10;
+                position: absolute;
+                width: 60vw;
+                height: 40vh;
+                top: 45vh;
+                left: 90vw;
+                border-top: 2vh solid darkslategrey;
+                border-bottom: 2vh solid darkslategrey;
+                box-shadow: inset 0px 0px 50px black;
+                background-color: black;
+                background-image: url("https://media.istockphoto.com/id/539260869/vector/film-reel-illustration-isolated-vector-illustration.jpg?s=612x612&w=0&k=20&c=zlDBfh2HA-C3U7RN5tFSPSownKonJM58SZr7yvQhvl4=");
+                background-size: contain;
+                background-repeat: repeat-x;
+                background-position: center;
+                /*animation: 3s 1 rollIn ease-in-out;*/
+            }
+            @keyframes rollIn {
+                0% {left: 0%;}
+                100% {left: 100vw;}
+            }
         </style>
+        <div id="film_roll"></div>
         <div id="gallery_holder">
             <div class="gallery_holder_item">
                 <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/581746_204903296323902_226228978_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=jlj1GZTO6lcAX8ITWCN&_nc_ht=scontent.fbud4-1.fna&oh=00_AfDtaFjA3qS5_FpMLHTslym38cSgPCKzB8rSVxeNE07n8A&oe=64346C8E" alt="">
                 <span>I.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
-                <img src="" alt="">
+                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
                 <span>II.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
@@ -85,7 +115,7 @@
                 <span>III.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
-                <img src="" alt="">
+                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
                 <span>IV.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
@@ -93,15 +123,15 @@
                 <span>V.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
-                <img src="" alt="">
+                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
                 <span>VI.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
-                <img src="" alt="">
+                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
                 <span>VII.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
-                <img src="" alt="">
+                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
                 <span>VIII.Kosarasok éjszakája</span>
             </div>
             <div class="gallery_holder_item">
@@ -119,7 +149,7 @@
             <div class="gallery_holder_item">
                 <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t39.30808-6/279359112_687108849029021_6730741418091150686_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=a5H3ojvuK_kAX8GzcrP&_nc_oc=AQlfHjoxI0oLUmSH7nyHbj6H23XxjuecAKFxkmIPhnd3IXFsoScakflxMbyMQDGZ8Zw&_nc_ht=scontent.fbud4-1.fna&oh=00_AfC2kUOJe-skQCn8Ku3sSkfvEAWuWkA2V3ub9Iff5DpCAw&oe=64111CB0" alt="">
                 <span>XII.Kosarasok éjszakája</span>
-            </div>
+            </div>-->
         </div>
         <script>
             const galleryItemsHolder = document.querySelector('#gallery_holder');
@@ -128,8 +158,8 @@
                 galleryItems[x].addEventListener('click', ()=>{
                     console.log(galleryItemsHolder)
                     galleryItemsHolder.style.top = "5vh";
-                    galleryItemsHolder.style.height = "30vh";
                 });
+                
             };
         </script>
     </body>
