@@ -4,163 +4,122 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="gallery.css">
         <title>Galéria</title>
     </head>
     <body>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
-            body {
-                background-image: url('https://cdn.discordapp.com/attachments/1066072940191416372/1084082191790784632/background_sidepage_4x.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-                background-position: center;
-            }
-            #gallery_holder {
-                position: relative;
-                width: 90vw;
-                height: 35vh;
-                left: 5vw;
-                top: 50vh;
-                margin: 0%;
-                padding: 0%;
-                background-color: rgb(0, 0, 0);
-                
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                
-                overflow-y: auto;
-                transition-duration: 0.5s;
-                background-image: url("https://media.istockphoto.com/id/539260869/vector/film-reel-illustration-isolated-vector-illustration.jpg?s=612x612&w=0&k=20&c=zlDBfh2HA-C3U7RN5tFSPSownKonJM58SZr7yvQhvl4=");
-                background-size: contain;
-                background-repeat: repeat-x;
-                background-attachment: local;
-            }
-            #gallery_holder::-webkit-scrollbar {background-color: black;}
-            #gallery_holder::-webkit-scrollbar-thumb {background-color: rgb(255, 255, 255, 0.8);}
-            .gallery_holder_item {
-                position: relative;
-                width: 15%;
-                height: 65%;
-                top: 0%;
-                margin-right: 0.95%;
-                margin-left: 0.75%;
-                padding: 1%;
-                flex-shrink: 0;
-                border-radius: 10px;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .gallery_holder_item > img {
-                position: relative;
-                width: 100%;
-                height: 80%;
-                left: 0%;
-                top: 0%;
-                margin: 0%;
-                -webkit-user-drag: none;
-                user-select: none;
-            }
-            .gallery_holder_item > span {
-                position: relative;
-                width: 100%;
-                height: auto;
-                left: 0%;
-                top: 0%;
-                margin: auto 0 auto 0;
-                color: black;
-                text-align: center;
-                font-size: 1.2vw;
-                font-style: italic;
-                font-family: 'Chakra Petch', sans-serif;
-                user-select: none;
-            }
-            #film_roll {
-                z-index: 10;
-                position: absolute;
-                width: 60vw;
-                height: 40vh;
-                top: 45vh;
-                left: 90vw;
-                border-top: 2vh solid darkslategrey;
-                border-bottom: 2vh solid darkslategrey;
-                box-shadow: inset 0px 0px 50px black;
-                background-color: black;
-                background-image: url("https://media.istockphoto.com/id/539260869/vector/film-reel-illustration-isolated-vector-illustration.jpg?s=612x612&w=0&k=20&c=zlDBfh2HA-C3U7RN5tFSPSownKonJM58SZr7yvQhvl4=");
-                background-size: contain;
-                background-repeat: repeat-x;
-                background-position: center;
-                /*animation: 3s 1 rollIn ease-in-out;*/
-            }
-            @keyframes rollIn {
-                0% {left: 0%;}
-                100% {left: 100vw;}
-            }
+
         </style>
-        <div id="film_roll"></div>
-        <div id="gallery_holder">
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/581746_204903296323902_226228978_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=jlj1GZTO6lcAX8ITWCN&_nc_ht=scontent.fbud4-1.fna&oh=00_AfDtaFjA3qS5_FpMLHTslym38cSgPCKzB8rSVxeNE07n8A&oe=64346C8E" alt="">
-                <span>I.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
-                <span>II.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/923206_204904129657152_444165641_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=V44rrf6cEAkAX8CFhn6&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBW-gKM_Zs-Rn5XSz3CfnOVb3D66BW-1wuSK8lfTt3fRg&oe=64346D2D" alt="">
-                <span>III.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
-                <span>IV.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/988560_204674959680069_109966096_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=76LjiBIUySIAX8GF2Rs&_nc_ht=scontent.fbud4-1.fna&oh=00_AfAIxnE_7k3mfVDj15EkGpdInJQ2e_3rLmmzRCBSGNsSaQ&oe=64346BC4" alt="">
-                <span>V.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
-                <span>VI.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
-                <span>VII.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" alt="">
-                <span>VIII.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t31.18172-8/23736170_922964817851076_7893338575434817832_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=c4L3NZta1cUAX9vLKIy&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBI1i-GyQsrDowPt0SBV_sk4eCh1CqWWnUFLBTqUezyeg&oe=6434593A" alt="">
-                <span>IX.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/46415912_1177154615765427_4752860828942729216_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=E0uOuOmBzPcAX81U7gr&_nc_ht=scontent.fbud4-1.fna&oh=00_AfCTs4N_zZ-fKS3PjbuUVwqRJkfMme43iuXQ8kjU6n6KhQ&oe=64346B70" alt="">
-                <span>X.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/74932097_1462292557251630_7460515019587846144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=42LYhwbK9oYAX8ddQM3&_nc_ht=scontent.fbud4-1.fna&oh=00_AfA22PuEMfE1pRwpQeewnRX-el8QyKVmIJPxK5voQjd2Mg&oe=64345EA6" alt="">
-                <span>XI.Kosarasok éjszakája</span>
-            </div>
-            <div class="gallery_holder_item">
-                <img src="https://scontent.fbud4-1.fna.fbcdn.net/v/t39.30808-6/279359112_687108849029021_6730741418091150686_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=a5H3ojvuK_kAX8GzcrP&_nc_oc=AQlfHjoxI0oLUmSH7nyHbj6H23XxjuecAKFxkmIPhnd3IXFsoScakflxMbyMQDGZ8Zw&_nc_ht=scontent.fbud4-1.fna&oh=00_AfC2kUOJe-skQCn8Ku3sSkfvEAWuWkA2V3ub9Iff5DpCAw&oe=64111CB0" alt="">
-                <span>XII.Kosarasok éjszakája</span>
-            </div>-->
+        <div id="film_roll">
+            <img src="./film_roll_part.png">
+            <img src="./film_roll_part.png">
+            <img src="./film_roll_part.png">
+            <img src="./film_roll_part.png">
         </div>
+        <div id="galleryNav_holder">
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>I.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>II.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>III.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>IV.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>V.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>VI.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>VII.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>VIII.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>IX.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>X.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>XI.Kosarasok éjszakája</h1>
+            </div>
+            <div class="galleryNav_holder_item">
+                <div class="img_holder"></div>
+                <h1>XII.Kosarasok éjszakája</h1>
+            </div>
+        </div>
+        <div id="galleryNavHolder_simple">
+            <div class="galleryNavHolder_simple_item"><h1>I.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>II.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>III.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>IV.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>V.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>VI.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>VII.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>VIII.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>IX.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>X.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>XI.Kosarasok éjszakája</h1></div>
+            <div class="galleryNavHolder_simple_item"><h1>XII.Kosarasok éjszakája</h1></div>
+        </div>
+        <div id="gallery"></div>
         <script>
-            const galleryItemsHolder = document.querySelector('#gallery_holder');
-            const galleryItems = document.querySelectorAll('.gallery_holder_item');
+            const kosarasokThumbnail = [
+            'https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/581746_204903296323902_226228978_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=jlj1GZTO6lcAX8ITWCN&_nc_ht=scontent.fbud4-1.fna&oh=00_AfDtaFjA3qS5_FpMLHTslym38cSgPCKzB8rSVxeNE07n8A&oe=64346C8E',
+            "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/923206_204904129657152_444165641_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=V44rrf6cEAkAX8CFhn6&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBW-gKM_Zs-Rn5XSz3CfnOVb3D66BW-1wuSK8lfTt3fRg&oe=64346D2D",
+            "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/988560_204674959680069_109966096_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=76LjiBIUySIAX8GF2Rs&_nc_ht=scontent.fbud4-1.fna&oh=00_AfAIxnE_7k3mfVDj15EkGpdInJQ2e_3rLmmzRCBSGNsSaQ&oe=64346BC4",
+            "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+            "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+            "https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t31.18172-8/23736170_922964817851076_7893338575434817832_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=c4L3NZta1cUAX9vLKIy&_nc_ht=scontent.fbud4-1.fna&oh=00_AfBI1i-GyQsrDowPt0SBV_sk4eCh1CqWWnUFLBTqUezyeg&oe=6434593A",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/46415912_1177154615765427_4752860828942729216_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=E0uOuOmBzPcAX81U7gr&_nc_ht=scontent.fbud4-1.fna&oh=00_AfCTs4N_zZ-fKS3PjbuUVwqRJkfMme43iuXQ8kjU6n6KhQ&oe=64346B70",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t1.6435-9/74932097_1462292557251630_7460515019587846144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=42LYhwbK9oYAX8ddQM3&_nc_ht=scontent.fbud4-1.fna&oh=00_AfA22PuEMfE1pRwpQeewnRX-el8QyKVmIJPxK5voQjd2Mg&oe=64345EA6",
+            "https://scontent.fbud4-1.fna.fbcdn.net/v/t39.30808-6/279359112_687108849029021_6730741418091150686_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=a5H3ojvuK_kAX8GzcrP&_nc_oc=AQlfHjoxI0oLUmSH7nyHbj6H23XxjuecAKFxkmIPhnd3IXFsoScakflxMbyMQDGZ8Zw&_nc_ht=scontent.fbud4-1.fna&oh=00_AfC2kUOJe-skQCn8Ku3sSkfvEAWuWkA2V3ub9Iff5DpCAw&oe=64111CB0",
+            ]
+            const galleryNavImgHolder = document.querySelectorAll('.img_holder');
+            const gallery = document.querySelector('#gallery');
+            const galleryNavHolder = document.querySelector('#galleryNav_holder');
+            const galleryNavHolderSimple = document.querySelector('#galleryNavHolder_simple');
+            const galleryItems = document.querySelectorAll('.galleryNav_holder_item');
+            const filmRoll = document.querySelector('#film_roll');
             for (let x = 0; x < galleryItems.length; x++) {
                 galleryItems[x].addEventListener('click', ()=>{
-                    console.log(galleryItemsHolder)
-                    galleryItemsHolder.style.top = "5vh";
+                    galleryNavHolder.style.top = "-70vh";
+                    filmRoll.style.top = "-72.5vh";
+                    galleryNavHolderSimple.style.display = "flex";
+                    gallery.style.display = "flex";
                 });
-                
             };
+            window.addEventListener("load", (event) => {
+                for (let x = 0; x < galleryNavImgHolder.length; x++) {galleryNavImgHolder[x].style.backgroundImage = "url("+kosarasokThumbnail[x]+")";};
+                setTimeout(() => {
+                    for (let x = 0; x < filmRoll.children.length; x++) {
+                        filmRoll.children[x].style.animation = "1s infinite null linear";
+                    }
+                }, 3000);
+
+            });
         </script>
     </body>
 </html>
