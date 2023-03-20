@@ -69,7 +69,7 @@ body {
     font-style: italic;
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
-    animation: 3s 1 fadeIn ease-out;
+    animation: 3s 1 fadeInNavText ease-out;
 }
 #film_roll {
     z-index: 10;
@@ -100,14 +100,15 @@ body {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    left: 0vw;
+    left: 100vw;
     top: 0vh;
     margin: 0%;
     padding: 0%;
     background-color: black;
-    display: none; /*flex*/
+    display: flex; /*flex*/
     flex-direction: row;
     overflow-y: auto;
+    animation: 2s 0 slideInLeft linear;
     transition-duration: 0.5s;
 }
 #galleryNavHolder_simple::-webkit-scrollbar {
@@ -154,13 +155,49 @@ body {
 }
 #gallery {
     z-index: -1;
-    display: none;
+    display: flex;
     position: absolute;
     width: 100vw;
     height: 100vh;
     left: 0vw;
-    top: 0vh;
+    top: 100vh;
     background-color: rgb(0, 0, 0, 0.9);
+}
+#toTop {
+    position: absolute;
+    z-index: 10;
+    width: 4vw;
+    height: 4vw;
+    right: -7vw;
+    bottom: 2vh;
+    border-radius: 50%;
+    outline: none;
+    border: 5px solid rgb(215,95,27);
+    background-color: rgb(231,93,54);
+    transition-duration: 0.3s; 
+}
+#toTop:hover {
+    background-color: rgb(251,120,25);
+    box-shadow: 0px 0px 10px 2px rgb(215,95,27), 0px 0px 5px 2px rgb(215,95,27) inset;
+    transition-duration: 0.3s;
+}
+#toTop > img {
+    width: 70%;
+    filter: drop-shadow(0px 0px 3px black);
+    transition-duration: 0.3s;
+}
+#toTop:hover > img {
+    width: 50%;
+}
+#toTop:hover > p {
+    font-size: 0.75vw;
+}
+#toTop > p {
+    margin: 0px;
+    font-size: 0vw;
+    transition-duration: 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 @keyframes rollIn {
@@ -175,8 +212,16 @@ body {
     0% {width: 55vw;}
     100% {width: 90vw;}
 }
-@keyframes fadeIn {
+@keyframes fadeInNavText {
     0% {opacity: 0;}
     80% {opacity: 0;}
     100% {opacity: 1;}
+}
+@keyframes slideInLeft {
+    0% {left: 100vw;}
+    100% {left: 0vw;}
+}
+@keyframes slideInTop {
+    0% {top: 100vh;}
+    100% {top: 0vh;}
 }

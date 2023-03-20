@@ -8,9 +8,6 @@
         <title>Galéria</title>
     </head>
     <body>
-        <style>
-
-        </style>
         <div id="film_roll">
             <img src="./film_roll_part.png">
             <img src="./film_roll_part.png">
@@ -82,6 +79,10 @@
             <div class="galleryNavHolder_simple_item"><h1>XII.Kosarasok éjszakája</h1></div>
         </div>
         <div id="gallery"></div>
+        <button id="toTop">
+            <img src="https://cdn-icons-png.flaticon.com/512/21/21241.png">
+            <p>Tetejére!</p>
+        </button>
         <script>
             const kosarasokThumbnail = [
             'https://scontent.fbud4-1.fna.fbcdn.net/v/t1.18169-9/581746_204903296323902_226228978_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=jlj1GZTO6lcAX8ITWCN&_nc_ht=scontent.fbud4-1.fna&oh=00_AfDtaFjA3qS5_FpMLHTslym38cSgPCKzB8rSVxeNE07n8A&oe=64346C8E',
@@ -103,20 +104,22 @@
             const galleryNavHolderSimple = document.querySelector('#galleryNavHolder_simple');
             const galleryItems = document.querySelectorAll('.galleryNav_holder_item');
             const filmRoll = document.querySelector('#film_roll');
+            const toTopScroll = document.querySelector('#toTop');
             for (let x = 0; x < galleryItems.length; x++) {
                 galleryItems[x].addEventListener('click', ()=>{
                     galleryNavHolder.style.top = "-70vh";
                     filmRoll.style.top = "-72.5vh";
-                    galleryNavHolderSimple.style.display = "flex";
-                    gallery.style.display = "flex";
+                    galleryNavHolderSimple.style.animation = "0.25s 1 slideInLeft ease";
+                    gallery.style.animation = "0.25s 1 slideInTop ease";
+                    galleryNavHolderSimple.style.left = "0vw"; 
+                    gallery.style.top = "10vh";
+                    toTopScroll.style.right = "2vw";
                 });
             };
             window.addEventListener("load", (event) => {
                 for (let x = 0; x < galleryNavImgHolder.length; x++) {galleryNavImgHolder[x].style.backgroundImage = "url("+kosarasokThumbnail[x]+")";};
                 setTimeout(() => {
-                    for (let x = 0; x < filmRoll.children.length; x++) {
-                        filmRoll.children[x].style.animation = "1s infinite null linear";
-                    }
+                    for (let x = 0; x < filmRoll.children.length; x++) {filmRoll.children[x].style.animation = "1s infinite null linear";};
                 }, 3000);
 
             });
