@@ -33,7 +33,7 @@ body {
     top: 0%;
     left: 0%;
     flex-shrink: 0;
-    background-image: url('./film_roll_part.png');
+    background-image: url('https://cdn.discordapp.com/attachments/1066072940191416372/1087402096149659698/film_roll_part.png');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@ body {
     border-top: 2vh solid darkslategrey;
     border-bottom: 2vh solid darkslategrey;
     background-color: black;
-    box-shadow: 0 0 10px 5px black;
+    box-shadow: inset 0px 0px 50px black;
     animation: 3s 1 rollIn ease-out;
     display: flex; /*flex*/
     flex-direction: row;
