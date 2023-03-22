@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-            
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 :root {
     --placeToLand: 0px;
     --placeToLand2: 0px;
@@ -37,17 +38,20 @@ body {
     margin-right: 1%;
     user-select: none;
     -webkit-user-drag: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .bk_backboard > p {
     position: absolute;
-    width: 100%;
     height: auto;
-    text-align: center;
+    width: 100%;
     top: 20%;
-    font-size: 1.3em;
-    color: black;
     font-family: 'Indie Flower', cursive;
+    font-size: 1.3vw;
     font-weight: bold;
+    text-align: center;
+    color: black;
 }
 .bk_backboard > img {
     position: absolute;
@@ -234,6 +238,7 @@ body {
     border-top: 65vh solid transparent;
     background-color: transparent;
 }
+
 
 @keyframes throwBall {
     25% {top: var(--placeToTop);}

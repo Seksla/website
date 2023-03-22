@@ -1,5 +1,4 @@
 var r = document.querySelector(':root');
-
 const backboards = document.querySelectorAll('.bk_backboard');
 const backboardsHolder = document.querySelector('#bk_backboard_holder');
 const ball = document.querySelector('#bk_ball');
@@ -34,11 +33,14 @@ for (let x = 0; x < backboards.length; x++) {
             window.open('Pages/'+ linkList[linkList.indexOf(backboards[x].id)] + ".html", "_self");
         }, animationDelay*1000);
     });
-}
+};
+
+
 
 //Nincsenek commentek?
-console.log("░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░",
-            "░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░",
+console.log(
+    "░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░",
+    "░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░",
     "░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░",
     "░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░",
     "░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░",
