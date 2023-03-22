@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="calendar.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./NavigationalBar/navbar.css">
         <title>Naptár</title>
     </head>
     <body>
@@ -102,6 +103,14 @@
                 border-top: 5px solid white;
             }
         </style>
+        <div id="navbar">
+            <a href="../index.html"><div class="nav_buttons"><p>Kezdő oldal</p></div></a>
+            <a href="./participants.html"><div class="nav_buttons"><p>Résztvevők</p></div></a>
+            <a href="./match_result.html"><div class="nav_buttons"><p>Meccsek és eredmények</p></div></a>
+            <a href="./gallery.html"><div class="nav_buttons"><p>Galéria</p></div></a>
+        </div>
+        <div id="navbar_call"><img src="https://cdn.discordapp.com/attachments/1066072940191416372/1088189464511254638/cog.png"></div>
+
         <div id="time_board">
             <div id="current_time_holder">
                 <span id="current_time_hour">00</span>
@@ -131,5 +140,6 @@
                 new Date().getMinutes() < 10 ? minHolder.innerText = "0" + new Date().getMinutes() : minHolder.innerText = new Date().getMinutes();
             }, 100);
         </script>
+        <script src="./NavigationalBar/navbar.js"></script>
     </body>
 </html>
