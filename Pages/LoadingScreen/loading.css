@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --groundWidth: 20vw; 
+    --groundHeight: 2vh;
+    --groundLeft:calc((100vw - var(--groundWidth))/2);
+    --ballHeight: calc(70vh - 5vw);
+}
+
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#loading_screen {
+    z-index: 100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0vh;
+    left: 0vw;
+    background-color: orange;
+    display: block;
+    transition-duration: 0.5s;
+}
+#loading_screen > #ground {
+    position: absolute;
+    height: var(--groundHeight);
+    width: var(--groundWidth);
+    top: 70vh;
+    left: var(--groundLeft);
+    background-color: rgb(240, 130, 0);
+    box-shadow: inset 0px 0px 7.5px black;
+}
+#loading_screen > #img_holder {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    top: var(--ballHeight);
+    left: calc(calc(var(--groundLeft) + (var(--groundWidth)/2)) - 2.5vw);
+    border-radius: 50%;
+    background-color: rgb(240, 130, 0);;
+    animation: 1.5s infinite bounce ease;
+}
+#loading_screen > #img_holder > img {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 0px 3px black);
+}
+#loading_screen > #text_holder {
+    position: absolute;
+    height: 7.5vh;
+    width: var(--groundWidth);
+    left: var(--groundLeft);
+    top: calc(70vh + var(--groundHeight));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#loading_screen > #text_holder > h1 {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    color: black;
+    transition-duration: 0.5s;
+}
+#loading_screen > #text_holder > h1:hover {
+    font-size: 1.75vw;
+    transition-duration: 0.5s;
+}
+#loading_screen > #text_holder > h1::after {
+    content: '.';
+    animation: 2s infinite loading_text linear;
+}
+@keyframes loading_text {
+    0% {content: '.';}
+    33% {content: '..';}
+    66% {content: '...';}
+    100% {content: '.';}
+}
+
+@keyframes bounce {
+    0% {top: 50vh;transform: rotate(0deg);}
+    40% {height: 5vw;}
+    50% {top: var(--ballHeight);height: 4vw;}
+    60% {height: 5vw;}
+    100% {top: 50vh;transform: rotate(360deg);}
+}
