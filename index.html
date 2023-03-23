@@ -7,8 +7,15 @@
         <link rel="stylesheet" href="index.css">
         <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" type="image/x-icon">
         <title>Kosarasok éjszakája</title>
+        <link rel="stylesheet" href="./Pages/LoadingScreen/loading.css">
+        <script src="./Pages/LoadingScreen/loading.js"></script>
     </head>
     <body>
+        <div id="loading_screen">
+            <div id="img_holder"><img src="https://cdn.discordapp.com/attachments/1066072940191416372/1088533283794604152/basketball.png"></div>
+            <div id="ground"></div>
+            <div id="text_holder"><h1>Loading</h1></div>
+        </div>
         <button onclick="Switch()" id="switch">
             <span id="switch_text">Kosarasok éjszakája</span>
             <img id="ball_star" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" alt="Kosárlabda égitest">
@@ -40,6 +47,5 @@
         </div>
         <img id="bk_ball" src="https://cdn.discordapp.com/attachments/1066072940191416372/1066073041081217165/basketball_moon.png" alt="Kosárlabda">
         <script src="index.js"></script>
-        <script src="navbar.js"></script>
     </body>
 </html>
